@@ -6,7 +6,10 @@ class Transtion:
 
 
 def inputLineBreak(text):
-    return input(f'{text}\n')
+    if PRINT_QUESTIONS:
+        return input(f'{text}\n')
+    else:
+        return input()
 
 
 def printNot():
@@ -31,6 +34,7 @@ def validateState(state_to_validation):
 
 
 ERROR_STATE = 'ERROR'
+PRINT_QUESTIONS = False
 
 states = inputLineBreak("Digite os estados")
 states = states.split()
