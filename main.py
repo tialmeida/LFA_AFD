@@ -53,7 +53,8 @@ for index in range(0, transtionsNumber):
     transtions.append(Transtion(transtion[0], transtion[2], transtion[1]))
 
 start_state = inputLineBreak("Digite o estado incial")
-validateState(start_state)
+if len(states) > 0:
+    validateState(start_state)
 
 end_states = inputLineBreak("Digite os estados finais").split()
 for end_state in end_states:
